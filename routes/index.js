@@ -13,7 +13,7 @@ var messages = [{
 ]
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', messages: messages });
+  res.render('index', { title: 'Super Simple Message Board', messages: messages });
 });
 
 module.exports = router;
