@@ -5,7 +5,12 @@ block content
   p Welcome to #{title}
   ul
   each mssg in messages
-    li #{mssg.user} : #{mssg.text} 
+    li #{mssg.user} : #{mssg.text}
+    br
+  br
+  .box
+      a(class="btn", href="/new") Compose Message
+    
     
 
 

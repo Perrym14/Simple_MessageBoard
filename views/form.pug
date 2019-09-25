@@ -1,11 +1,21 @@
-doctype html
-html(lang='en')
-  head
-    title Chat
-  body
-    h1 Enter new message
-    div
-      input(type='text')
-      | Enter name 
-      input(type='text')
-      |  Enter message
+extends layout
+
+block content
+  h1= title
+  form(method='POST', action='/new')
+    input(
+        type="text"
+        class="input"
+        name="user"
+        required
+        placeholder="Username")
+    br
+    br 
+    textarea(
+        class="input"
+        required
+        name="text"
+        placeholder="enter message")
+    br
+    input(type="submit", class="btn")
+    form

@@ -9,5 +9,4 @@ router.get('/', function(req, res, next) {
   res.render('form', {title: "Chat"});
 });
 
-
 module.exports = router;

@@ -16,5 +16,20 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Super Simple Message Board', messages: messages });
 });
 
+//POST form information.
+router.post('/new', function(req, res){
+  var author = req.body.user;
+  var newMessage = req.body.text;
+
+  messages.push(
+    {
+      text: newMessage,
+      user: author,
+      added: new Date()
+    }
+    );
+res.redirect('/');
+});
+
 
 module.exports = router;
