@@ -16,4 +16,5 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Super Simple Message Board', messages: messages });
 });
 
+
 module.exports = router;
